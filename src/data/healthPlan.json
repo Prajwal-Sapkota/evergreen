@@ -1,0 +1,46 @@
+{
+  "checkup_plans": [
+    {
+      "id": "essential-wellness",
+      "slug": "essential-wellness-checkup",
+      "title": "Essential Wellness Package",
+      "icon": "LuHeartPulse",
+      "short_description": "Comprehensive screening for overall health, focused on early detection.",
+      "features": [
+        "CBC with ESD",
+        "Liver Function Test (LFT)",
+        "Kidney Function Test (KFT)",
+        "Blood Sugar Profile",
+        "Physician Consultation"
+      ]
+    },
+    {
+      "id": "heart-health-plus",
+      "slug": "heart-health-plus-checkup",
+      "title": "Heart Health Plus",
+      "icon": "LuActivity",
+      "short_description": "Advanced cardiovascular assessment for those with heart concerns.",
+      "features": [
+        "Advanced ECG & TMT",
+        "Echocardiogram (ECHO)",
+        "Lipid Profile (Full)",
+        "Hs-CRP (Heart Marker)",
+        "Cardiologist Consultation"
+      ]
+    },
+    {
+      "id": "executive-female",
+      "slug": "executive-female-checkup",
+      "title": "Executive Female Health",
+      "icon": "LuSparkles",
+      "short_description": "Tailored screening addressing unique health needs for women.",
+      "features": [
+        "Mammography (3D)",
+        "Pap Smear & HPV Test",
+        "Thyroid Profile (Complete)",
+        "Vitamin D & B12 Test",
+        "Gynecologist Consultation"
+      ]
+    }
+  ]
+}

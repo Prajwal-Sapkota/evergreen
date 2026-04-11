@@ -1,0 +1,53 @@
+
+{
+  "reviews": [
+    {
+      "id": 1,
+      "rating": 5,
+      "text": "Excellent experience! The booking process was seamless, staff were exceptionally professional, and the care provided was compassionate and precise. I felt truly listened to and cared for.",
+      "name": "Sarah J.",
+      "specialty": "Pediatrics Patient Parent",
+      "image": "/images/avatars/avatar1.jpg"
+    },
+    {
+      "id": 2,
+      "rating": 5,
+      "text": "The doctors and nurses here are world-class. My complex procedure went perfectly, and the post-op care was detailed and attentive. They made me feel completely comfortable and prioritized my safety above all else.",
+      "name": "Michael R.",
+      "specialty": "Cardiology Patient",
+      "image": "/images/avatars/avatar2.jpg"
+    },
+    {
+      "id": 3,
+      "rating": 5,
+      "text": "Exceptional care at Evergreen. The entire team showed genuine empathy and technical expertise. They have truly made a significant impact on my recovery journey. Friendly environment and clear communication.",
+      "name": "Aisha P.",
+      "specialty": "Family Medicine",
+      "image": "/images/avatars/avatar3.jpg"
+    },
+    {
+      "id": 4,
+      "rating": 5,
+      "text": "Highly satisfied with the services. They covered every detail carefully, from diagnostics to consultation. My recovery was much smoother because of their structured and empathetic approach. Highly recommended.",
+      "name": "David L.",
+      "specialty": "Physical Therapy",
+      "image": "/images/avatars/avatar4.jpg"
+    },
+    {
+      "id": 5,
+      "rating": 5,
+      "text": "Our family has trusted Evergreen for generations. The quality of care remains unmatched, Combining modern innovation with old-fashioned compassion. Seamless admission and follow-up process.",
+      "name": "Maria C.",
+      "specialty": "Long-term Care",
+      "image": "/images/avatars/avatar5.jpg"
+    },
+    {
+      "id": 6,
+      "rating": 5,
+      "text": "Fantastic experience with the doctors at Evergreen General. They were punctual, listened attentively, and provided clear next steps. The facility is clean and highly professional. truly patient-focused.",
+      "name": "Daniel K.",
+      "specialty": "Orthopedics Patient",
+      "image": "/images/avatars/avatar6.jpg"
+    }
+  ]
+}
