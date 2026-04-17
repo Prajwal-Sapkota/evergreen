@@ -1,32 +1,232 @@
 {
-  "hospital_services": [
+  "departments": [
+    {
+      "id": "critical-care",
+      "slug": "critical-care",
+      "title": "Critical Care",
+      "short_description": "Intensive care and emergency medical services for life-threatening conditions.",
+      "long_description": "Our Critical Care department provides comprehensive intensive care for patients with life-threatening conditions. We have state-of-the-art ICUs, CCUs, and emergency response systems. Our team of intensivists, critical care nurses, and support staff work round the clock to provide the highest level of care for critically ill patients. We are equipped with advanced monitoring systems, ventilators, and life-support equipment to handle the most complex medical emergencies.",
+      "icon": "ActivityIcon",
+      "image": "/images/critical-care.png",
+      "cover_image": "/images/departments/critical-care-cover.jpg",
+      "status": "active",
+      "service_ids": ["emergency-trauma", "critical-care-services"],
+      "features": [
+        "24/7 Intensive Care Unit",
+        "Advanced Life Support Systems",
+        "Dedicated Critical Care Team",
+        "Continuous Patient Monitoring",
+        "Rapid Response Team"
+      ],
+      "why_choose_us": [
+        "Round-the-clock intensivist coverage",
+        "Low nurse-to-patient ratio (1:1 or 1:2)",
+        "Advanced hemodynamic monitoring",
+        "Multidisciplinary approach to critical care"
+      ]
+    },
+    {
+      "id": "cardiology",
+      "slug": "cardiology",
+      "title": "Cardiology",
+      "short_description": "Advanced heart care with minimally invasive procedures for cardiovascular diseases.",
+      "long_description": "Our Cardiology department is a center of excellence for comprehensive heart care. We offer a full spectrum of cardiac services from preventive cardiology to complex interventional procedures. Our team of interventional cardiologists, cardiac surgeons, and support staff use the latest technology to diagnose and treat all types of heart conditions. We have a state-of-the-art catheterization laboratory, echocardiography suite, and cardiac rehabilitation center.",
+      "icon": "HeartPulseIcon",
+      "image": "/images/cardiology1.jpg",
+      "cover_image": "/images/departments/cardiology-cover.jpg",
+      "status": "active",
+      "service_ids": ["cath-lab"],
+      "features": [
+        "24/7 Cardiac Emergency",
+        "Advanced Cath Lab",
+        "Primary Angioplasty Services",
+        "Cardiac Rehabilitation",
+        "Preventive Cardiology"
+      ],
+      "why_choose_us": [
+        "Experienced interventional cardiologists",
+        "Latest generation cath lab equipment",
+        "Fast track emergency cardiac care",
+        "Comprehensive cardiac rehabilitation program"
+      ]
+    },
+    {
+      "id": "diagnostics",
+      "slug": "diagnostics",
+      "title": "Diagnostics & Imaging",
+      "short_description": "Comprehensive diagnostic imaging including X-ray, CT Scan, MRI, and Ultrasound.",
+      "long_description": "Our Diagnostics & Imaging department is equipped with the latest medical imaging technology. We provide accurate and timely diagnostic services to support clinical decision-making. Our team of radiologists, technicians, and support staff ensure high-quality imaging with minimal radiation exposure. We offer a full range of services from routine X-rays to advanced MRI and CT scans.",
+      "icon": "RadiationIcon",
+      "image": "/images/diagnostic.jpg",
+      "cover_image": "/images/departments/diagnostics-cover.jpg",
+      "status": "active",
+      "service_ids": ["radiology", "optical-diagnostics"],
+      "features": [
+        "24/7 Emergency Imaging",
+        "Digital X-Ray",
+        "High-Resolution CT Scan",
+        "3 Tesla MRI",
+        "Ultrasound with Doppler"
+      ],
+      "why_choose_us": [
+        "Low radiation dose technology",
+        "Quick report turnaround time",
+        "Expert radiologist consultation",
+        "Advanced 3D reconstruction capabilities"
+      ]
+    },
+    {
+      "id": "inpatient-care",
+      "slug": "inpatient-care",
+      "title": "In-Patient Care",
+      "short_description": "Comfortable and professional care for patients requiring overnight stays.",
+      "long_description": "Our In-Patient Care department provides comfortable and compassionate care for patients requiring hospital admission. We offer a range of accommodation options from general wards to deluxe suites. Our dedicated team of physicians, nurses, and support staff ensure round-the-clock medical care, comfort, and safety for all admitted patients. We focus on creating a healing environment that promotes recovery and well-being.",
+      "icon": "BedIcon",
+      "image": "/images/in-patient.png",
+      "cover_image": "/images/departments/inpatient-cover.jpg",
+      "status": "active",
+      "service_ids": ["in-patient"],
+      "features": [
+        "24/7 Nursing Care",
+        "Regular Physician Visits",
+        "In-house Pharmacy",
+        "Dietary Services",
+        "Patient Entertainment System"
+      ],
+      "why_choose_us": [
+        "Comfortable and clean patient rooms",
+        "Attendant accommodation available",
+        "Personalized care plans",
+        "24/7 security and support"
+      ]
+    },
+    {
+      "id": "outpatient-care",
+      "slug": "outpatient-care",
+      "title": "Out-Patient Care",
+      "short_description": "Specialized consultations and treatments without hospital admission.",
+      "long_description": "Our Out-Patient Care department provides high-quality medical consultations and treatments without the need for hospital admission. We have a team of specialist doctors across various disciplines available for consultation. Our OPD features comfortable waiting areas, multiple consultation rooms, and integrated diagnostic services. We offer online appointment booking and digital health records for patient convenience.",
+      "icon": "UserCheckIcon",
+      "image": "/images/out-patient.webp",
+      "cover_image": "/images/departments/outpatient-cover.jpg",
+      "status": "active",
+      "service_ids": ["out-patient"],
+      "features": [
+        "Online Appointment Booking",
+        "Digital Health Records",
+        "Pharmacy on Site",
+        "Diagnostic Lab",
+        "Follow-up Reminders"
+      ],
+      "why_choose_us": [
+        "Short waiting times",
+        "Experienced specialist doctors",
+        "Integrated diagnostic services",
+        "Convenient appointment scheduling"
+      ]
+    },
+    {
+      "id": "surgery",
+      "slug": "surgery",
+      "title": "Surgery & OT",
+      "short_description": "Modern Operation Theaters for major and minor surgical procedures.",
+      "long_description": "Our Surgery department features modern operation theaters equipped with advanced technology for all types of surgical procedures. We perform both major and minor surgeries using traditional and minimally invasive techniques. Our surgical team includes experienced surgeons, anesthesiologists, and operation theater technicians who ensure patient safety and optimal outcomes. We maintain the highest standards of sterility and infection control.",
+      "icon": "ScissorsIcon",
+      "image": "/images/surgery.jpg",
+      "cover_image": "/images/departments/surgery-cover.jpg",
+      "status": "active",
+      "service_ids": ["ot-surgical"],
+      "features": [
+        "Laminar Airflow Systems",
+        "Advanced Anesthesia Equipment",
+        "HD Laparoscopic Towers",
+        "C-Arm Imaging",
+        "Robotic Surgery (Coming Soon)"
+      ],
+      "why_choose_us": [
+        "Minimally invasive surgical options",
+        "Experienced surgical team",
+        "State-of-the-art operation theaters",
+        "Post-operative care and rehabilitation"
+      ]
+    },
+    {
+      "id": "pain-management",
+      "slug": "pain-management",
+      "title": "Pain Management",
+      "short_description": "Specialized care for chronic and acute pain relief.",
+      "long_description": "Our Pain Management department provides comprehensive care for patients suffering from acute and chronic pain. We use a multidisciplinary approach combining medication, interventional procedures, physical therapy, and psychological support. Our pain specialists work closely with patients to develop personalized treatment plans that address the root cause of pain and improve quality of life.",
+      "icon": "ActivityIcon",
+      "image": "/images/painmanagement.jpg",
+      "cover_image": "/images/departments/pain-management-cover.jpg",
+      "status": "active",
+      "service_ids": ["pain-management"],
+      "features": [
+        "Multidisciplinary Team",
+        "Personalized Treatment Plans",
+        "Non-Opioid Options",
+        "Rehabilitation Support",
+        "Interventional Pain Procedures"
+      ],
+      "why_choose_us": [
+        "Comprehensive pain assessment",
+        "Latest interventional techniques",
+        "Focus on non-opioid treatments",
+        "Integrated rehabilitation program"
+      ]
+    },
+    {
+      "id": "dermatology",
+      "slug": "dermatology",
+      "title": "Skin & Aesthetics",
+      "short_description": "Dermatological treatments and advanced aesthetic procedures.",
+      "long_description": "Our Dermatology department offers comprehensive care for all skin, hair, and nail conditions. We combine medical dermatology with advanced aesthetic treatments to provide complete skin care solutions. Our team of dermatologists and cosmetic specialists use the latest technology for diagnosis and treatment of various skin conditions. We offer both medical treatments for skin diseases and cosmetic procedures for aesthetic enhancement.",
+      "icon": "SparklesIcon",
+      "image": "/images/dermatology.jpg",
+      "cover_image": "/images/departments/dermatology-cover.jpg",
+      "status": "active",
+      "service_ids": ["skin-aesthetics"],
+      "features": [
+        "USFDA Approved Lasers",
+        "Dermatopathology Lab",
+        "Patch Testing",
+        "Skin Biopsy Services",
+        "Cosmetic Procedures"
+      ],
+      "why_choose_us": [
+        "Expert dermatologists",
+        "Advanced laser technology",
+        "Safe and effective procedures",
+        "Customized treatment plans"
+      ]
+    }
+  ],
+
+  "services": [
     {
       "id": "emergency-trauma",
       "slug": "emergency-and-trauma-care",
       "title": "Emergency and Trauma Care",
       "short_description": "24/7 immediate medical response for acute illnesses and traumatic injuries.",
-      "long_description": "Our Emergency and Trauma department is equipped with state-of-the-art life-saving technology and staffed by specialized physicians and nurses. We provide rapid assessment, intervention, and stabilization for critical conditions. Our team is trained to handle mass casualties, cardiac emergencies, stroke symptoms, severe injuries, and other life-threatening situations with minimal waiting time.",
+      "long_description": "Our Emergency and Trauma department is equipped with state-of-the-art life-saving technology and staffed by specialized physicians and nurses. We provide rapid assessment, intervention, and stabilization for critical conditions. Our team is trained to handle mass casualties, cardiac emergencies, stroke symptoms, severe injuries, and other life-threatening situations with minimal waiting time. We follow the 'Golden Hour' protocol to ensure timely intervention for trauma patients.",
+      "department_id": "critical-care",
       "icon": "EmergencyIcon",
       "status": "active",
       "image": "/images/emergency-trauma.jpg",
-      "thumbnail": "/images/services/thumb/emergency-trauma-thumb.jpg",
-      "gallery": [
-        "/images/services/emergency-trauma-1.jpg",
-        "/images/services/emergency-trauma-2.jpg",
-        "/images/services/emergency-trauma-3.jpg"
-      ],
       "features": [
         "24/7 Ambulance Service",
         "Advanced Life Support Systems",
         "Dedicated Trauma Team",
         "Immediate Triage System",
-        "Emergency Operating Theaters"
+        "Emergency Operating Theaters",
+        "Rapid Response Protocol"
       ],
       "benefits": [
         "Minimal waiting time",
         "Expert emergency physicians",
         "Life-saving interventions within 'Golden Hour'",
-        "Seamless admission process"
+        "Seamless admission process",
+        "Direct specialist consultation"
       ],
       "faqs": [
         {
@@ -36,6 +236,10 @@
         {
           "question": "What should I bring to the emergency department?",
           "answer": "Please bring your ID card, insurance information, list of current medications, and any relevant medical records."
+        },
+        {
+          "question": "How long will I wait in the emergency department?",
+          "answer": "Wait times vary based on the severity of conditions. Critical patients are seen immediately, while non-urgent cases may have minimal waiting time."
         }
       ],
       "doctors": [
@@ -43,56 +247,137 @@
           "name": "Dr. Sarah Johnson",
           "designation": "Chief of Emergency Medicine",
           "experience": "15+ years",
-          "image": "/images/doctors/sarah-johnson.jpg"
+          "education": "MD, Emergency Medicine",
+          "specialization": "Trauma Care, Critical Care",
+          "image": "/images/doctors/sarah-johnson.jpg",
+          "available": true
         },
         {
           "name": "Dr. Michael Chen",
           "designation": "Trauma Specialist",
           "experience": "12+ years",
-          "image": "/images/doctors/michael-chen.jpg"
+          "education": "MD, Trauma Surgery",
+          "specialization": "Polytrauma, Emergency Surgery",
+          "image": "/images/doctors/michael-chen.jpg",
+          "available": true
+        },
+        {
+          "name": "Dr. Emily Rodriguez",
+          "designation": "Emergency Physician",
+          "experience": "10+ years",
+          "education": "MD, Emergency Medicine",
+          "specialization": "Pediatric Emergency, Cardiac Emergencies",
+          "image": "/images/doctors/emily-rodriguez.jpg",
+          "available": true
         }
       ],
       "technology_used": [
         "Portable Ultrasound Machines",
-        "Ventilators with Advanced Monitoring",
+        "Advanced Ventilators",
         "Digital X-Ray Systems",
-        "Point-of-Care Testing Equipment"
+        "Point-of-Care Testing Equipment",
+        "ECMO Machine",
+        "Portable Defibrillators"
       ],
       "timing": "24/7 - Open All Hours",
       "contact_number": "+1 800-657-876",
-      "emergency_number": "+1 800-657-877",
-      "meta_title": "Emergency & Trauma Care Services | 24/7 Medical Response",
-      "meta_description": "Round-the-clock emergency medical services with advanced life support systems and specialized trauma care team. Immediate response for critical conditions.",
-      "related_services": ["critical-care", "cath-lab", "radiology"],
-      "seo_keywords": ["emergency care", "trauma center", "24/7 hospital", "emergency doctor", "trauma surgery"]
+      "emergency_number": "+1 800-657-877"
+    },
+    {
+      "id": "critical-care-services",
+      "slug": "critical-care-services",
+      "title": "Critical Care Services (ICU/CCU)",
+      "short_description": "Intensive monitoring and treatment for life-threatening conditions.",
+      "long_description": "Our Critical Care Unit provides 1:1 nursing care and advanced life support for patients who are hemodynamically unstable. Equipped with advanced monitoring systems, ventilators, and crash carts, our ICU team is trained to handle severe medical emergencies and post-operative complications. We have separate ICUs for medical, surgical, and cardiac patients.",
+      "department_id": "critical-care",
+      "icon": "ThermometerIcon",
+      "status": "active",
+      "image": "/images/critical-care.png",
+      "features": [
+        "24/7 Intensivist Coverage",
+        "Advanced Ventilators",
+        "Continuous Renal Replacement Therapy",
+        "Hemodynamic Monitoring",
+        "Bedside Ultrasound",
+        "Tele-ICU Monitoring"
+      ],
+      "benefits": [
+        "Round-the-clock critical care",
+        "Rapid response team",
+        "Low nurse-to-patient ratio (1:1 or 1:2)",
+        "Advanced life support",
+        "Family support services"
+      ],
+      "faqs": [
+        {
+          "question": "What is visiting policy in ICU?",
+          "answer": "Limited visiting hours (30 minutes, twice daily) to ensure patient rest and prevent infections. Special exceptions for critical situations."
+        },
+        {
+          "question": "How long do patients stay in ICU?",
+          "answer": "Stays vary from 1-2 days to several weeks depending on the severity of the condition and response to treatment."
+        },
+        {
+          "question": "Can family members stay with the patient?",
+          "answer": "Due to the critical nature of care, overnight stays are not permitted. However, designated waiting areas are available for families."
+        }
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Christopher White",
+          "designation": "Critical Care Director",
+          "experience": "17+ years",
+          "education": "MD, Critical Care Medicine",
+          "specialization": "Medical ICU, Post-operative Care",
+          "image": "/images/doctors/christopher-white.jpg",
+          "available": true
+        },
+        {
+          "name": "Dr. Priya Sharma",
+          "designation": "Intensivist",
+          "experience": "12+ years",
+          "education": "MD, Pulmonary & Critical Care",
+          "specialization": "Respiratory Failure, Sepsis Management",
+          "image": "/images/doctors/priya-sharma.jpg",
+          "available": true
+        }
+      ],
+      "technology_used": [
+        "Multipara Monitors",
+        "Transport Ventilators",
+        "ECMO Machine",
+        "Point-of-Care Ultrasound",
+        "Continuous Renal Replacement Therapy Machines",
+        "Intra-aortic Balloon Pump"
+      ],
+      "timing": "24/7 - Always Open",
+      "contact_number": "+1 800-657-876",
+      "emergency_number": "+1 800-657-877"
     },
     {
       "id": "cath-lab",
       "slug": "cath-lab-services",
       "title": "Cath-Lab Services",
       "short_description": "Advanced cardiac intervention and diagnostic imaging for heart conditions.",
-      "long_description": "Our Catheterization Laboratory (Cath-Lab) provides minimally invasive procedures to diagnose and treat cardiovascular diseases, including angioplasty, stenting, and coronary angiography. Equipped with the latest imaging technology, our lab ensures precise diagnosis and effective treatment of heart conditions with reduced recovery time and minimal discomfort.",
+      "long_description": "Our Catheterization Laboratory (Cath-Lab) provides minimally invasive procedures to diagnose and treat cardiovascular diseases, including angioplasty, stenting, and coronary angiography. Equipped with the latest imaging technology, our lab ensures precise diagnosis and effective treatment of heart conditions with reduced recovery time and minimal discomfort. We perform both diagnostic and interventional procedures.",
+      "department_id": "cardiology",
       "icon": "HeartPulseIcon",
       "status": "active",
       "image": "/images/cath-lab.webp",
-      "thumbnail": "/images/services/thumb/cath-lab-thumb.jpg",
-      "gallery": [
-        "/images/services/cath-lab-1.jpg",
-        "/images/services/cath-lab-2.jpg",
-        "/images/services/cath-lab-3.jpg"
-      ],
       "features": [
         "24/7 Cardiac Emergency Care",
         "Primary Angioplasty Services",
         "Coronary Angiography",
         "Pacemaker Implantation",
-        "Peripheral Vascular Interventions"
+        "Peripheral Vascular Interventions",
+        "Structural Heart Procedures"
       ],
       "benefits": [
         "Minimally invasive procedures",
         "Shorter hospital stay",
         "Faster recovery time",
-        "Reduced risk of complications"
+        "Reduced risk of complications",
+        "Same-day discharge for diagnostic procedures"
       ],
       "faqs": [
         {
@@ -102,6 +387,10 @@
         {
           "question": "How long does a cath-lab procedure take?",
           "answer": "Most procedures take 30-60 minutes, but preparation and recovery time may add 2-4 hours total."
+        },
+        {
+          "question": "Is the procedure painful?",
+          "answer": "Local anesthesia is used at the catheter insertion site. You may feel pressure but not pain during the procedure."
         }
       ],
       "doctors": [
@@ -109,57 +398,67 @@
           "name": "Dr. Robert Williams",
           "designation": "Interventional Cardiologist",
           "experience": "18+ years",
-          "image": "/images/doctors/robert-williams.jpg"
+          "education": "DM, Cardiology",
+          "specialization": "Complex Coronary Interventions, Structural Heart",
+          "image": "/images/doctors/robert-williams.jpg",
+          "available": true
         },
         {
           "name": "Dr. Emily Martinez",
           "designation": "Cardiac Surgeon",
           "experience": "14+ years",
-          "image": "/images/doctors/emily-martinez.jpg"
+          "education": "MCh, Cardiac Surgery",
+          "specialization": "Minimally Invasive Cardiac Surgery",
+          "image": "/images/doctors/emily-martinez.jpg",
+          "available": true
+        },
+        {
+          "name": "Dr. James Wilson",
+          "designation": "Cardiologist",
+          "experience": "12+ years",
+          "education": "MD, Cardiology",
+          "specialization": "Preventive Cardiology, Heart Failure",
+          "image": "/images/doctors/james-wilson-cardio.jpg",
+          "available": true
         }
       ],
       "technology_used": [
         "Digital Flat Panel Detector",
         "Intravascular Ultrasound (IVUS)",
         "Optical Coherence Tomography (OCT)",
-        "Fractional Flow Reserve (FFR)"
+        "Fractional Flow Reserve (FFR)",
+        "Rotablation System",
+        "Intra-aortic Balloon Pump"
       ],
       "timing": "Monday - Saturday: 8:00 AM - 8:00 PM | Emergency: 24/7",
       "contact_number": "+1 800-657-876",
-      "appointment_number": "+1 800-657-878",
-      "meta_title": "Cath-Lab Services | Advanced Cardiac Care & Heart Treatment",
-      "meta_description": "State-of-the-art catheterization laboratory for cardiac interventions including angioplasty, stenting, and coronary angiography. Expert cardiologists and modern technology.",
-      "related_services": ["emergency-trauma", "critical-care", "radiology"],
-      "seo_keywords": ["cath lab", "cardiac catheterization", "angioplasty", "heart stent", "coronary angiography"]
+      "appointment_number": "+1 800-657-878"
     },
     {
       "id": "radiology",
       "slug": "radiology-services",
       "title": "Radiology Services",
       "short_description": "Comprehensive diagnostic imaging including X-ray, CT Scan, and Ultrasound.",
-      "long_description": "We offer a full range of imaging services to support accurate diagnosis. Our department features high-resolution digital imaging equipment managed by expert radiologists. From routine X-rays to advanced MRI and CT scans, we provide precise imaging results with quick turnaround times to aid in effective treatment planning.",
+      "long_description": "We offer a full range of imaging services to support accurate diagnosis. Our department features high-resolution digital imaging equipment managed by expert radiologists. From routine X-rays to advanced MRI and CT scans, we provide precise imaging results with quick turnaround times to aid in effective treatment planning. We follow strict safety protocols to minimize radiation exposure.",
+      "department_id": "diagnostics",
       "icon": "RadiationIcon",
       "status": "active",
       "image": "/images/radiology.jpg",
-      "thumbnail": "/images/services/thumb/radiology-thumb.jpg",
-      "gallery": [
-        "/images/services/radiology-1.jpg",
-        "/images/services/radiology-2.jpg",
-        "/images/services/radiology-3.jpg"
-      ],
       "features": [
         "Digital X-Ray",
         "CT Scan (128 Slice)",
         "MRI (3 Tesla)",
         "Ultrasound with Doppler",
         "Mammography",
-        "Bone Densitometry"
+        "Bone Densitometry",
+        "Fluoroscopy"
       ],
       "benefits": [
         "Low radiation exposure",
         "High-resolution images",
-        "Quick report delivery",
-        "Expert radiologist consultation"
+        "Quick report delivery (within 24 hours)",
+        "Expert radiologist consultation",
+        "CD copy of images provided"
       ],
       "faqs": [
         {
@@ -169,6 +468,10 @@
         {
           "question": "How long does a CT scan take?",
           "answer": "A typical CT scan takes 10-30 minutes depending on the body part being examined."
+        },
+        {
+          "question": "When will I get my reports?",
+          "answer": "Preliminary reports are available within 2 hours, and final reports within 24 hours."
         }
       ],
       "doctors": [
@@ -176,21 +479,101 @@
           "name": "Dr. James Wilson",
           "designation": "Chief Radiologist",
           "experience": "20+ years",
-          "image": "/images/doctors/james-wilson.jpg"
+          "education": "MD, Radiology",
+          "specialization": "Neuroradiology, Musculoskeletal Imaging",
+          "image": "/images/doctors/james-wilson.jpg",
+          "available": true
+        },
+        {
+          "name": "Dr. Maria Garcia",
+          "designation": "Senior Radiologist",
+          "experience": "15+ years",
+          "education": "MD, Radiology",
+          "specialization": "Body Imaging, Ultrasound",
+          "image": "/images/doctors/maria-garcia.jpg",
+          "available": true
         }
       ],
       "technology_used": [
         "128-Slice CT Scanner",
         "3 Tesla MRI Machine",
         "Digital Mammography System",
-        "Color Doppler Ultrasound"
+        "Color Doppler Ultrasound",
+        "DEXA Scanner",
+        "CR X-Ray System"
       ],
       "timing": "Monday - Sunday: 7:00 AM - 9:00 PM",
-      "contact_number": "+1 800-657-876",
-      "meta_title": "Radiology Services | Advanced Diagnostic Imaging Center",
-      "meta_description": "Comprehensive radiology services including X-ray, CT Scan, MRI, and Ultrasound. High-resolution digital imaging with expert radiologists for accurate diagnosis.",
-      "related_services": ["emergency-trauma", "cath-lab", "optical-diagnostics"],
-      "seo_keywords": ["radiology", "x-ray", "ct scan", "mri", "ultrasound", "diagnostic imaging"]
+      "contact_number": "+1 800-657-876"
+    },
+    {
+      "id": "optical-diagnostics",
+      "slug": "optical-diagnostics-services",
+      "title": "Optical Diagnostics Services",
+      "short_description": "Comprehensive eye examinations and vision correction diagnostics.",
+      "long_description": "Advanced optical care including glaucoma screening, retinal check-ups, and precise vision testing to ensure optimal eye health. Our ophthalmology department uses cutting-edge diagnostic equipment for early detection of eye diseases and vision problems. We offer comprehensive eye examinations for all age groups.",
+      "department_id": "diagnostics",
+      "icon": "EyeIcon",
+      "status": "active",
+      "image": "/images/optical-diagnostic.jpg",
+      "features": [
+        "Digital Eye Strain Assessment",
+        "Contact Lens Fitting",
+        "Pediatric Eye Care",
+        "Geriatric Eye Care",
+        "Diabetic Retinopathy Screening",
+        "Glaucoma Screening"
+      ],
+      "benefits": [
+        "Early disease detection",
+        "Precise prescription for glasses",
+        "Non-invasive testing",
+        "Expert ophthalmologists",
+        "Comprehensive eye health report"
+      ],
+      "faqs": [
+        {
+          "question": "How often should I get my eyes checked?",
+          "answer": "Adults should have a comprehensive eye exam every 1-2 years. Diabetics and those with eye conditions need annual checks."
+        },
+        {
+          "question": "Does the test hurt?",
+          "answer": "No, all diagnostic tests are non-invasive and painless."
+        },
+        {
+          "question": "Do I need to dilate my pupils?",
+          "answer": "For comprehensive eye exams, pupil dilation may be recommended for better visualization of the retina."
+        }
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Jennifer Adams",
+          "designation": "Senior Ophthalmologist",
+          "experience": "14+ years",
+          "education": "MS, Ophthalmology",
+          "specialization": "Cataract Surgery, Glaucoma Management",
+          "image": "/images/doctors/jennifer-adams.jpg",
+          "available": true
+        },
+        {
+          "name": "Dr. David Kim",
+          "designation": "Optometrist",
+          "experience": "8+ years",
+          "education": "OD, Optometry",
+          "specialization": "Contact Lens Fitting, Pediatric Optometry",
+          "image": "/images/doctors/david-kim.jpg",
+          "available": true
+        }
+      ],
+      "technology_used": [
+        "Fundus Camera",
+        "Optical Coherence Tomographer (OCT)",
+        "Automated Perimeter",
+        "Corneal Topographer",
+        "Auto Refractometer",
+        "Slit Lamp with Imaging"
+      ],
+      "timing": "Monday - Saturday: 10:00 AM - 7:00 PM",
+      "contact_number": "+1 800-657-876"
     },
     {
       "id": "in-patient",
@@ -198,14 +581,50 @@
       "title": "In-Patient Services",
       "short_description": "Comfortable and professional care for patients requiring overnight stays.",
       "long_description": "Our in-patient facilities range from general wards to private suites, ensuring constant monitoring and care from our dedicated medical staff during your recovery. Each room is designed for patient comfort with modern amenities, nurse call systems, and regular physician visits. We provide comprehensive care including meals, medications, nursing support, and rehabilitation services.",
+      "department_id": "inpatient-care",
       "icon": "BedIcon",
       "status": "active",
       "image": "/images/in-patient.png",
-      "thumbnail": "/images/services/thumb/inpatient-thumb.jpg",
-      "gallery": [
-        "/images/services/inpatient-1.jpg",
-        "/images/services/inpatient-2.jpg",
-        "/images/services/inpatient-3.jpg"
+      "features": [
+        "24/7 Nursing Care",
+        "Regular Physician Visits",
+        "In-house Pharmacy",
+        "Dietary Services",
+        "Housekeeping Services",
+        "Patient Entertainment System",
+        "Wi-Fi Connectivity"
+      ],
+      "benefits": [
+        "Round-the-clock medical supervision",
+        "Personalized care plans",
+        "Family visitation options",
+        "Comfortable recovery environment",
+        "Attendant accommodation available"
+      ],
+      "faqs": [
+        {
+          "question": "Can family members stay overnight?",
+          "answer": "Yes, attendants are allowed in private and deluxe rooms. Semi-private rooms have limited visitor hours."
+        },
+        {
+          "question": "Are meals included?",
+          "answer": "Yes, all in-patients receive customized meals based on their dietary requirements."
+        },
+        {
+          "question": "What amenities are provided?",
+          "answer": "TV, nurse call system, adjustable bed, bedside locker, and attached bathroom are provided in all room categories."
+        }
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Lisa Anderson",
+          "designation": "Chief of Inpatient Services",
+          "experience": "16+ years",
+          "education": "MD, Internal Medicine",
+          "specialization": "Hospital Medicine, Patient Safety",
+          "image": "/images/doctors/lisa-anderson.jpg",
+          "available": true
+        }
       ],
       "room_types": [
         {
@@ -233,59 +652,69 @@
           "features": ["Separate living room", "Kitchenette", "Private balcony", "Personal attendant room", "Premium amenities"]
         }
       ],
-      "features": [
-        "24/7 Nursing Care",
-        "Regular Physician Visits",
-        "In-house Pharmacy",
-        "Dietary Services",
-        "Housekeeping Services",
-        "Patient Entertainment System"
-      ],
-      "benefits": [
-        "Round-the-clock medical supervision",
-        "Personalized care plans",
-        "Family visitation options",
-        "Comfortable recovery environment"
-      ],
-      "faqs": [
-        {
-          "question": "Can family members stay overnight?",
-          "answer": "Yes, attendants are allowed in private and deluxe rooms. Semi-private rooms have limited visitor hours."
-        },
-        {
-          "question": "Are meals included?",
-          "answer": "Yes, all in-patients receive customized meals based on their dietary requirements."
-        }
-      ],
-      "doctors": [
-        {
-          "name": "Dr. Lisa Anderson",
-          "designation": "Chief of Inpatient Services",
-          "experience": "16+ years",
-          "image": "/images/doctors/lisa-anderson.jpg"
-        }
-      ],
       "timing": "24/7 - Admission Available Anytime",
       "contact_number": "+1 800-657-876",
-      "admission_number": "+1 800-657-879",
-      "meta_title": "In-Patient Services | Comfortable Hospital Stay & Care",
-      "meta_description": "Comfortable in-patient facilities with modern amenities and 24/7 medical care. Choose from general wards, private rooms, or deluxe suites for your recovery.",
-      "related_services": ["critical-care", "out-patient", "ot-surgical"],
-      "seo_keywords": ["inpatient care", "hospital room", "patient admission", "hospital stay", "ward facilities"]
+      "admission_number": "+1 800-657-879"
     },
     {
       "id": "out-patient",
       "slug": "out-patient-services",
       "title": "Out-Patient Services",
       "short_description": "Specialized consultations and treatments without the need for hospital admission.",
-      "long_description": "Providing access to specialists across various medical disciplines for diagnosis, follow-up care, and minor procedures on a walk-in or appointment basis. Our OPD features comfortable waiting areas, multiple consultation rooms, and integrated diagnostic services for a seamless healthcare experience.",
+      "long_description": "Providing access to specialists across various medical disciplines for diagnosis, follow-up care, and minor procedures on a walk-in or appointment basis. Our OPD features comfortable waiting areas, multiple consultation rooms, and integrated diagnostic services for a seamless healthcare experience. We offer online appointment booking and telemedicine consultations.",
+      "department_id": "outpatient-care",
       "icon": "UserCheckIcon",
       "status": "active",
       "image": "/images/out-patient.webp",
-      "thumbnail": "/images/services/thumb/outpatient-thumb.jpg",
-      "gallery": [
-        "/images/services/outpatient-1.jpg",
-        "/images/services/outpatient-2.jpg"
+      "features": [
+        "Online Appointment Booking",
+        "Digital Health Records",
+        "Pharmacy on Site",
+        "Diagnostic Lab",
+        "Follow-up Reminders",
+        "Telemedicine Consultations",
+        "Multi-specialty Clinics"
+      ],
+      "benefits": [
+        "No hospitalization required",
+        "Cost-effective consultations",
+        "Flexible appointment timing",
+        "Quick access to specialists",
+        "Reduced waiting times"
+      ],
+      "faqs": [
+        {
+          "question": "Do I need a referral for a specialist?",
+          "answer": "Most specialists can be consulted directly. Some insurance plans may require a primary care referral."
+        },
+        {
+          "question": "How do I book an appointment?",
+          "answer": "You can book online through our website, call our appointment desk, or walk in during OPD hours."
+        },
+        {
+          "question": "What is the consultation fee?",
+          "answer": "Consultation fees vary by specialist. Please contact our appointment desk for specific pricing."
+        }
+      ],
+      "doctors": [
+        {
+          "name": "Dr. David Lee",
+          "designation": "Director - OPD Services",
+          "experience": "12+ years",
+          "education": "MD, Family Medicine",
+          "specialization": "Primary Care, Preventive Medicine",
+          "image": "/images/doctors/david-lee.jpg",
+          "available": true
+        },
+        {
+          "name": "Dr. Sarah Thompson",
+          "designation": "General Physician",
+          "experience": "10+ years",
+          "education": "MD, Internal Medicine",
+          "specialization": "General Medicine, Chronic Disease Management",
+          "image": "/images/doctors/sarah-thompson.jpg",
+          "available": true
+        }
       ],
       "specialties": [
         "General Medicine",
@@ -299,59 +728,85 @@
         "Ophthalmology",
         "Psychiatry"
       ],
-      "features": [
-        "Online Appointment Booking",
-        "Digital Health Records",
-        "Pharmacy on Site",
-        "Diagnostic Lab",
-        "Follow-up Reminders"
-      ],
-      "benefits": [
-        "No hospitalization required",
-        "Cost-effective consultations",
-        "Flexible appointment timing",
-        "Quick access to specialists"
-      ],
-      "faqs": [
-        {
-          "question": "Do I need a referral for a specialist?",
-          "answer": "Most specialists can be consulted directly. Some insurance plans may require a primary care referral."
-        },
-        {
-          "question": "How do I book an appointment?",
-          "answer": "You can book online through our website, call our appointment desk, or walk in during OPD hours."
-        }
-      ],
-      "doctors": [
-        {
-          "name": "Dr. David Lee",
-          "designation": "Director - OPD Services",
-          "experience": "12+ years",
-          "image": "/images/doctors/david-lee.jpg"
-        }
-      ],
       "timing": "Monday - Saturday: 9:00 AM - 6:00 PM | Sunday: 9:00 AM - 1:00 PM",
       "contact_number": "+1 800-657-876",
-      "appointment_number": "+1 800-657-878",
-      "meta_title": "Out-Patient Services | Specialist Consultations & Care",
-      "meta_description": "Access to multi-specialty out-patient services with experienced doctors. Online appointment booking, digital records, and integrated diagnostics available.",
-      "related_services": ["in-patient", "radiology", "skin-aesthetics"],
-      "seo_keywords": ["outpatient care", "specialist consultation", "OPD services", "doctor appointment", "walk-in clinic"]
+      "appointment_number": "+1 800-657-878"
     },
     {
       "id": "ot-surgical",
       "slug": "ot-and-surgical-services",
       "title": "OT and Surgical Services",
       "short_description": "Modern Operation Theaters for major and minor surgical procedures.",
-      "long_description": "Our surgical suites are designed to maintain the highest standards of sterility and safety, catering to orthopedic, general, and specialized surgeries. Each OT is equipped with laminar airflow systems, advanced anesthesia workstations, and high-definition surgical cameras for minimally invasive procedures.",
+      "long_description": "Our surgical suites are designed to maintain the highest standards of sterility and safety, catering to orthopedic, general, and specialized surgeries. Each OT is equipped with laminar airflow systems, advanced anesthesia workstations, and high-definition surgical cameras for minimally invasive procedures. We perform both elective and emergency surgeries.",
+      "department_id": "surgery",
       "icon": "ScissorsIcon",
       "status": "active",
-      "image": "/images/ot-surgical.webp",
-      "thumbnail": "/images/services/thumb/surgery-thumb.jpg",
-      "gallery": [
-        "/images/services/surgery-1.jpg",
-        "/images/services/surgery-2.jpg",
-        "/images/services/surgery-3.jpg"
+      "image": "/images/surgery.jpg",
+      "features": [
+        "Laminar Airflow Systems",
+        "Advanced Anesthesia Equipment",
+        "HD Laparoscopic Towers",
+        "C-Arm Imaging",
+        "Robotic Surgery (Coming Soon)",
+        "Post-Anesthesia Care Unit"
+      ],
+      "benefits": [
+        "Minimally invasive options",
+        "Reduced post-op pain",
+        "Shorter hospital stay",
+        "Lower infection rates",
+        "Faster recovery"
+      ],
+      "faqs": [
+        {
+          "question": "What is the recovery time after surgery?",
+          "answer": "Recovery time varies by procedure. Minor surgeries may need 1-2 days, while major surgeries can require weeks of recovery."
+        },
+        {
+          "question": "Is minimally invasive surgery available?",
+          "answer": "Yes, we offer laparoscopic and keyhole surgeries for many procedures with faster recovery."
+        },
+        {
+          "question": "What is the pre-surgery preparation?",
+          "answer": "You will receive detailed instructions including fasting, medication adjustments, and pre-operative tests."
+        }
+      ],
+      "doctors": [
+        {
+          "name": "Dr. William Taylor",
+          "designation": "Chief of Surgery",
+          "experience": "22+ years",
+          "education": "MS, General Surgery",
+          "specialization": "Laparoscopic Surgery, GI Surgery",
+          "image": "/images/doctors/william-taylor.jpg",
+          "available": true
+        },
+        {
+          "name": "Dr. Patricia Clark",
+          "designation": "Minimally Invasive Surgeon",
+          "experience": "15+ years",
+          "education": "MCh, Minimal Access Surgery",
+          "specialization": "Laparoscopic Hernia, Gallbladder Surgery",
+          "image": "/images/doctors/patricia-clark.jpg",
+          "available": true
+        },
+        {
+          "name": "Dr. Mark Anderson",
+          "designation": "Anesthesiologist",
+          "experience": "12+ years",
+          "education": "MD, Anesthesiology",
+          "specialization": "Regional Anesthesia, Pain Management",
+          "image": "/images/doctors/mark-anderson.jpg",
+          "available": true
+        }
+      ],
+      "technology_used": [
+        "3D Laparoscopic System",
+        "Electrosurgical Units",
+        "Surgical Navigation System",
+        "Advanced Patient Monitors",
+        "C-Arm Image Intensifier",
+        "Harmonic Scalpel"
       ],
       "surgery_types": [
         "General Surgery",
@@ -363,136 +818,75 @@
         "Gynecological Surgery",
         "Urological Surgery"
       ],
-      "features": [
-        "Laminar Airflow Systems",
-        "Advanced Anesthesia Equipment",
-        "HD Laparoscopic Towers",
-        "C-Arm Imaging",
-        "Robotic Surgery (Coming Soon)"
-      ],
-      "benefits": [
-        "Minimally invasive options",
-        "Reduced post-op pain",
-        "Shorter hospital stay",
-        "Lower infection rates"
-      ],
-      "faqs": [
-        {
-          "question": "What is the recovery time after surgery?",
-          "answer": "Recovery time varies by procedure. Minor surgeries may need 1-2 days, while major surgeries can require weeks of recovery."
-        },
-        {
-          "question": "Is minimally invasive surgery available?",
-          "answer": "Yes, we offer laparoscopic and keyhole surgeries for many procedures with faster recovery."
-        }
-      ],
-      "doctors": [
-        {
-          "name": "Dr. William Taylor",
-          "designation": "Chief of Surgery",
-          "experience": "22+ years",
-          "image": "/images/doctors/william-taylor.jpg"
-        },
-        {
-          "name": "Dr. Patricia Clark",
-          "designation": "Minimally Invasive Surgeon",
-          "experience": "15+ years",
-          "image": "/images/doctors/patricia-clark.jpg"
-        }
-      ],
-      "technology_used": [
-        "3D Laparoscopic System",
-        "Electrosurgical Units",
-        "Surgical Navigation System",
-        "Advanced Patient Monitors"
-      ],
       "timing": "Monday - Saturday: 8:00 AM - 8:00 PM | Emergency Surgeries: 24/7",
-      "contact_number": "+1 800-657-876",
-      "meta_title": "Surgical Services | Modern Operation Theaters & Procedures",
-      "meta_description": "State-of-the-art operation theaters for major and minor surgeries. Advanced equipment, expert surgeons, and minimally invasive options available.",
-      "related_services": ["in-patient", "critical-care", "pain-management"],
-      "seo_keywords": ["surgery", "operation theater", "surgical procedures", "laparoscopic surgery", "orthopedic surgery"]
-    },
-    {
-      "id": "optical-diagnostics",
-      "slug": "optical-diagnostics-services",
-      "title": "Optical Diagnostics Services",
-      "short_description": "Comprehensive eye examinations and vision correction diagnostics.",
-      "long_description": "Advanced optical care including glaucoma screening, retinal check-ups, and precise vision testing to ensure optimal eye health. Our ophthalmology department uses cutting-edge diagnostic equipment for early detection of eye diseases and vision problems.",
-      "icon": "EyeIcon",
-      "status": "active",
-      "image": "/images/optical-diagnostic.jpg",
-      "thumbnail": "/images/services/thumb/optical-thumb.jpg",
-      "gallery": [
-        "/images/services/optical-1.jpg",
-        "/images/services/optical-2.jpg"
-      ],
-      "tests_offered": [
-        "Visual Acuity Test",
-        "Refraction Test",
-        "Slit Lamp Examination",
-        "Tonometry (Glaucoma Test)",
-        "Retinal Examination",
-        "Corneal Topography",
-        "Optical Coherence Tomography (OCT)"
-      ],
-      "features": [
-        "Digital Eye Strain Assessment",
-        "Contact Lens Fitting",
-        "Pediatric Eye Care",
-        "Geriatric Eye Care",
-        "Diabetic Retinopathy Screening"
-      ],
-      "benefits": [
-        "Early disease detection",
-        "Precise prescription for glasses",
-        "Non-invasive testing",
-        "Expert ophthalmologists"
-      ],
-      "faqs": [
-        {
-          "question": "How often should I get my eyes checked?",
-          "answer": "Adults should have a comprehensive eye exam every 1-2 years. Diabetics and those with eye conditions need annual checks."
-        },
-        {
-          "question": "Does the test hurt?",
-          "answer": "No, all diagnostic tests are non-invasive and painless."
-        }
-      ],
-      "doctors": [
-        {
-          "name": "Dr. Jennifer Adams",
-          "designation": "Senior Ophthalmologist",
-          "experience": "14+ years",
-          "image": "/images/doctors/jennifer-adams.jpg"
-        }
-      ],
-      "technology_used": [
-        "Fundus Camera",
-        "Optical Coherence Tomographer",
-        "Automated Perimeter",
-        "Corneal Topographer"
-      ],
-      "timing": "Monday - Saturday: 10:00 AM - 7:00 PM",
-      "contact_number": "+1 800-657-876",
-      "meta_title": "Optical Diagnostics | Comprehensive Eye Care Services",
-      "meta_description": "Complete eye examination and vision testing services. Advanced diagnostic equipment for early detection of glaucoma, retinal diseases, and vision problems.",
-      "related_services": ["out-patient", "radiology"],
-      "seo_keywords": ["eye test", "optical diagnostics", "glaucoma screening", "retinal checkup", "vision testing"]
+      "contact_number": "+1 800-657-876"
     },
     {
       "id": "pain-management",
       "slug": "pain-management-services",
       "title": "Pain Management Services",
       "short_description": "Specialized care for chronic and acute pain relief.",
-      "long_description": "Interdisciplinary approaches to manage pain through therapy, medication, and advanced interventional techniques to improve quality of life. Our pain management specialists work together to create personalized treatment plans addressing the root cause of your pain.",
+      "long_description": "Interdisciplinary approaches to manage pain through therapy, medication, and advanced interventional techniques to improve quality of life. Our pain management specialists work together to create personalized treatment plans addressing the root cause of your pain. We offer both pharmacological and non-pharmacological treatments.",
+      "department_id": "pain-management",
       "icon": "ActivityIcon",
       "status": "active",
-      "image": "/images/pain-management.jpeg",
-      "thumbnail": "/images/services/thumb/pain-management-thumb.jpg",
-      "gallery": [
-        "/images/services/pain-management-1.jpg",
-        "/images/services/pain-management-2.jpg"
+      "image": "/images/painmanagement.jpg",
+      "features": [
+        "Multidisciplinary Team",
+        "Personalized Treatment Plans",
+        "Non-Opioid Options",
+        "Rehabilitation Support",
+        "Psychological Counseling",
+        "Interventional Procedures"
+      ],
+      "benefits": [
+        "Reduced pain levels",
+        "Improved mobility",
+        "Better quality of life",
+        "Decreased medication dependence",
+        "Return to normal activities"
+      ],
+      "faqs": [
+        {
+          "question": "How long does pain management treatment take?",
+          "answer": "Treatment duration varies based on condition. Some patients see improvement in weeks, while chronic conditions may need ongoing management."
+        },
+        {
+          "question": "Are injections painful?",
+          "answer": "Local anesthesia is used to minimize discomfort. Most patients tolerate procedures well."
+        },
+        {
+          "question": "Do I need a referral?",
+          "answer": "Some insurance plans require a referral from your primary care physician. Please check with your insurance provider."
+        }
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Richard Brown",
+          "designation": "Pain Management Specialist",
+          "experience": "13+ years",
+          "education": "MD, Physical Medicine & Rehabilitation",
+          "specialization": "Chronic Pain, Interventional Pain Management",
+          "image": "/images/doctors/richard-brown.jpg",
+          "available": true
+        },
+        {
+          "name": "Dr. Lisa Wong",
+          "designation": "Pain Psychologist",
+          "experience": "10+ years",
+          "education": "PhD, Clinical Psychology",
+          "specialization": "Pain Psychology, Cognitive Behavioral Therapy",
+          "image": "/images/doctors/lisa-wong.jpg",
+          "available": true
+        }
+      ],
+      "technology_used": [
+        "Epidural Steroid Injection Systems",
+        "Nerve Block Equipment",
+        "Radiofrequency Ablation Devices",
+        "Spinal Cord Stimulator",
+        "Ultrasound for Guided Injections",
+        "TENS Units"
       ],
       "conditions_treated": [
         "Chronic Back Pain",
@@ -514,115 +908,84 @@
         "Acupuncture",
         "Cognitive Behavioral Therapy"
       ],
-      "features": [
-        "Multidisciplinary Team",
-        "Personalized Treatment Plans",
-        "Non-Opioid Options",
-        "Rehabilitation Support"
-      ],
-      "benefits": [
-        "Reduced pain levels",
-        "Improved mobility",
-        "Better quality of life",
-        "Decreased medication dependence"
-      ],
-      "faqs": [
-        {
-          "question": "How long does pain management treatment take?",
-          "answer": "Treatment duration varies based on condition. Some patients see improvement in weeks, while chronic conditions may need ongoing management."
-        },
-        {
-          "question": "Are injections painful?",
-          "answer": "Local anesthesia is used to minimize discomfort. Most patients tolerate procedures well."
-        }
-      ],
-      "doctors": [
-        {
-          "name": "Dr. Richard Brown",
-          "designation": "Pain Management Specialist",
-          "experience": "13+ years",
-          "image": "/images/doctors/richard-brown.jpg"
-        }
-      ],
       "timing": "Monday - Friday: 9:00 AM - 6:00 PM",
-      "contact_number": "+1 800-657-876",
-      "meta_title": "Pain Management Services | Chronic Pain Relief & Treatment",
-      "meta_description": "Specialized pain management for chronic and acute conditions. Multidisciplinary approach including injections, therapy, and rehabilitation.",
-      "related_services": ["out-patient", "ot-surgical", "in-patient"],
-      "seo_keywords": ["pain management", "chronic pain", "back pain treatment", "nerve block", "pain relief"]
-    },
-    {
-      "id": "critical-care",
-      "slug": "critical-care-services",
-      "title": "Critical Care Services",
-      "short_description": "Intensive monitoring and treatment for life-threatening conditions (ICU/CCU).",
-      "long_description": "Our Critical Care Unit provides 1:1 nursing care and advanced life support for patients who are hemodynamically unstable. Equipped with advanced monitoring systems, ventilators, and crash carts, our ICU team is trained to handle severe medical emergencies and post-operative complications.",
-      "icon": "ThermometerIcon",
-      "status": "active",
-      "image": "/images/critical-care.png",
-      "thumbnail": "/images/services/thumb/icu-thumb.jpg",
-      "gallery": [
-        "/images/services/icu-1.jpg",
-        "/images/services/icu-2.jpg"
-      ],
-      "features": [
-        "24/7 Intensivist Coverage",
-        "Advanced Ventilators",
-        "Continuous Renal Replacement Therapy",
-        "Hemodynamic Monitoring",
-        "Bedside Ultrasound"
-      ],
-      "benefits": [
-        "Round-the-clock critical care",
-        "Rapid response team",
-        "Low nurse-to-patient ratio",
-        "Advanced life support"
-      ],
-      "faqs": [
-        {
-          "question": "What is visiting policy in ICU?",
-          "answer": "Limited visiting hours (30 minutes, twice daily) to ensure patient rest and prevent infections."
-        },
-        {
-          "question": "How long do patients stay in ICU?",
-          "answer": "Stays vary from 1-2 days to several weeks depending on the severity of the condition."
-        }
-      ],
-      "doctors": [
-        {
-          "name": "Dr. Christopher White",
-          "designation": "Critical Care Director",
-          "experience": "17+ years",
-          "image": "/images/doctors/christopher-white.jpg"
-        }
-      ],
-      "technology_used": [
-        "Multipara Monitors",
-        "Transport Ventilators",
-        "ECMO Machine",
-        "Point-of-Care Ultrasound"
-      ],
-      "timing": "24/7 - Always Open",
-      "contact_number": "+1 800-657-876",
-      "meta_title": "Critical Care Services | Intensive Care Unit (ICU/CCU)",
-      "meta_description": "Advanced intensive care unit with 24/7 monitoring and specialized critical care team. Life support systems and emergency response for critical patients.",
-      "related_services": ["emergency-trauma", "in-patient", "cath-lab"],
-      "seo_keywords": ["critical care", "ICU", "intensive care", "critical care unit", "life support"]
+      "contact_number": "+1 800-657-876"
     },
     {
       "id": "skin-aesthetics",
       "slug": "skin-and-aesthetics-clinic",
       "title": "Skin & Aesthetics Clinic",
       "short_description": "Dermatological treatments and advanced aesthetic procedures.",
-      "long_description": "Expert dermatological care for skin conditions alongside modern aesthetic treatments for skin rejuvenation and cosmetic enhancement. Our clinic offers medical dermatology for conditions like acne, eczema, and psoriasis, as well as cosmetic procedures including laser treatments, chemical peels, and anti-aging therapies.",
+      "long_description": "Expert dermatological care for skin conditions alongside modern aesthetic treatments for skin rejuvenation and cosmetic enhancement. Our clinic offers medical dermatology for conditions like acne, eczema, and psoriasis, as well as cosmetic procedures including laser treatments, chemical peels, and anti-aging therapies. We use USFDA-approved equipment for all procedures.",
+      "department_id": "dermatology",
       "icon": "SparklesIcon",
       "status": "active",
       "image": "/images/skin-aesthetics.webp",
-      "thumbnail": "/images/services/thumb/skin-clinic-thumb.jpg",
-      "gallery": [
-        "/images/services/skin-clinic-1.jpg",
-        "/images/services/skin-clinic-2.jpg",
-        "/images/services/skin-clinic-3.jpg"
+      "features": [
+        "USFDA Approved Lasers",
+        "Dermatopathology Lab",
+        "Patch Testing",
+        "Skin Biopsy Services",
+        "Cosmetic Consultations",
+        "Anti-aging Treatments"
+      ],
+      "benefits": [
+        "Expert dermatologists",
+        "Advanced laser technology",
+        "Safe and effective procedures",
+        "Customized treatment plans",
+        "Minimal downtime"
+      ],
+      "faqs": [
+        {
+          "question": "Are aesthetic procedures painful?",
+          "answer": "Most procedures involve minimal discomfort. Topical anesthetics are used when needed."
+        },
+        {
+          "question": "How many sessions of laser hair removal are needed?",
+          "answer": "Typically 6-8 sessions spaced 4-6 weeks apart for optimal results."
+        },
+        {
+          "question": "Is there any downtime after procedures?",
+          "answer": "Downtime varies by procedure. Non-invasive treatments have no downtime, while laser procedures may have 2-7 days of recovery."
+        }
+      ],
+      "doctors": [
+        {
+          "name": "Dr. Amanda Foster",
+          "designation": "Chief Dermatologist",
+          "experience": "11+ years",
+          "education": "MD, Dermatology",
+          "specialization": "Medical Dermatology, Laser Treatments",
+          "image": "/images/doctors/amanda-foster.jpg",
+          "available": true
+        },
+        {
+          "name": "Dr. Brian Miller",
+          "designation": "Cosmetic Dermatologist",
+          "experience": "9+ years",
+          "education": "MD, Dermatology",
+          "specialization": "Cosmetic Dermatology, Anti-aging",
+          "image": "/images/doctors/brian-miller.jpg",
+          "available": true
+        },
+        {
+          "name": "Dr. Sophia Lee",
+          "designation": "Dermatopathologist",
+          "experience": "7+ years",
+          "education": "MD, Dermatopathology",
+          "specialization": "Skin Cancer Diagnosis, Complex Skin Conditions",
+          "image": "/images/doctors/sophia-lee.jpg",
+          "available": true
+        }
+      ],
+      "technology_used": [
+        "Q-Switched Nd:YAG Laser",
+        "Fractional CO2 Laser",
+        "IPL Device",
+        "Cryotherapy Equipment",
+        "Microdermabrasion Machine",
+        "HydraFacial System"
       ],
       "treatments": [
         "Laser Hair Removal",
@@ -645,55 +1008,9 @@
         "Aging Signs (Wrinkles, Fine Lines)",
         "Hair Loss"
       ],
-      "features": [
-        "USFDA Approved Lasers",
-        "Dermatopathology Lab",
-        "Patch Testing",
-        "Skin Biopsy Services"
-      ],
-      "benefits": [
-        "Expert dermatologists",
-        "Advanced laser technology",
-        "Safe and effective procedures",
-        "Customized treatment plans"
-      ],
-      "faqs": [
-        {
-          "question": "Are aesthetic procedures painful?",
-          "answer": "Most procedures involve minimal discomfort. Topical anesthetics are used when needed."
-        },
-        {
-          "question": "How many sessions of laser hair removal are needed?",
-          "answer": "Typically 6-8 sessions spaced 4-6 weeks apart for optimal results."
-        }
-      ],
-      "doctors": [
-        {
-          "name": "Dr. Amanda Foster",
-          "designation": "Chief Dermatologist",
-          "experience": "11+ years",
-          "image": "/images/doctors/amanda-foster.jpg"
-        },
-        {
-          "name": "Dr. Brian Miller",
-          "designation": "Cosmetic Dermatologist",
-          "experience": "9+ years",
-          "image": "/images/doctors/brian-miller.jpg"
-        }
-      ],
-      "technology_used": [
-        "Q-Switched Nd:YAG Laser",
-        "Fractional CO2 Laser",
-        "IPL Device",
-        "Cryotherapy Equipment"
-      ],
       "timing": "Monday - Saturday: 10:00 AM - 8:00 PM",
       "contact_number": "+1 800-657-876",
-      "appointment_number": "+1 800-657-878",
-      "meta_title": "Skin & Aesthetics Clinic | Dermatology & Cosmetic Treatments",
-      "meta_description": "Comprehensive dermatology and aesthetic treatments including laser therapy, chemical peels, and anti-aging procedures. Expert care for all skin conditions.",
-      "related_services": ["out-patient", "optical-diagnostics"],
-      "seo_keywords": ["dermatology", "skin clinic", "laser treatment", "aesthetic clinic", "anti-aging", "acne treatment"]
+      "appointment_number": "+1 800-657-878"
     }
   ]
 }

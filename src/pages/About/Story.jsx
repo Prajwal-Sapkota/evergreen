@@ -5,7 +5,7 @@ const Story = () => {
  
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white">
+    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-[#f0fffe] to-white">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         
         {/* LEFT PART - IMAGE COLLAGE */}
@@ -14,7 +14,7 @@ const Story = () => {
           {/* Left Column - Full height image */}
           <div className="relative overflow-hidden rounded-2xl group">
             <img 
-              src="/images/doctor1.avif" 
+              src="/images/doctor1.png" 
               className="w-full h-[320px] sm:h-[360px] lg:h-[380px] object-cover transition-transform duration-500 group-hover:scale-105" 
               alt="Doctor" 
             />
@@ -44,7 +44,7 @@ const Story = () => {
           {/* Third Image - Spanning both columns (col-span-2) */}
           <div className="col-span-2 relative overflow-hidden rounded-2xl group">
             <img 
-              src="/images/child.avif" 
+              src="/images/child.jpg" 
               className="w-full h-[180px] sm:h-[200px] lg:h-[220px] object-cover transition-transform duration-500 group-hover:scale-105" 
               alt="Child" 
             />

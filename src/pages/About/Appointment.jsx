@@ -1,10 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { LuPhone, LuMail } from 'react-icons/lu';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+
 
 const Appointment = () => {
+   const location = useLocation();
+
+  useEffect(() => {
+    // Check if URL has #appointment
+    if (location.hash === '#appointment') {
+      const element = document.getElementById('appointment');
+      if (element) {
+        // Wait a tiny bit for page to render, then scroll
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   return (
-    <section className="bg-[#d4fffc] py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-16 min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id='appointment' className="bg-[#d4fffc] py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-16 min-h-screen flex items-center justify-center relative overflow-hidden">
       
      {/* Perfect Circle Shape - Top Right with Gradient */}
 <div className="absolute top-[-100px] right-[-100px] w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] pointer-events-none z-0">

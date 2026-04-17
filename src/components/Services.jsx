@@ -1,14 +1,14 @@
-// src/components/Services.jsx
-import React, { useRef, useState, useEffect } from 'react';
-import { motion, useAnimationControls } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
-  LuCircleAlert, LuHeartPulse, LuMicroscope, LuBed, 
-  LuUserCheck, LuScissors, LuEye, LuActivity, 
-  LuThermometer, LuSparkles, LuChevronLeft, LuChevronRight,
-  LuStethoscope, LuPill, LuBone, LuBrain, LuDroplet
+  LuCircleAlert, LuHeartPulse, LuMicroscope, LuBed,
+  LuUserCheck, LuScissors, LuEye, LuActivity,
+  LuThermometer, LuSparkles, LuStethoscope, LuPill, 
+  LuBone, LuBrain, LuDroplet, LuArrowUpRight, LuArrowRight
 } from 'react-icons/lu';
 
-import servicesData from '../data/services.json';
+import medicalData from '../data/services.json';
 
 const iconMap = {
   EmergencyIcon: LuCircleAlert,
@@ -29,146 +29,153 @@ const iconMap = {
 };
 
 const Services = () => {
-  const [isPaused, setIsPaused] = useState(false);
-  const activeServices = servicesData.hospital_services.filter(s => s.status === 'active');
-  
-  // Create a triple-buffered list for seamless looping
-  const displayServices = [...activeServices, ...activeServices, ...activeServices];
+  const activeServices = medicalData.services.filter(s => s.status === 'active');
+  // Show only first 8 services
+  const displayServices = activeServices.slice(0, 8);
+  const [hoveredCard, setHoveredCard] = useState(null);
 
   return (
-    <section className="py-12 sm:py-16 md:py-24 lg:py-32 bg-[#f0fffe] overflow-hidden relative">
-      {/* Gradient Overlays for realistic fade effect */}
-      {/* Left Gradient */}
-      <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-12 md:w-20 lg:w-32 bg-gradient-to-r from-[#f0fffe] via-[#f0fffe]/50 to-transparent z-20 pointer-events-none" />
-      
-      {/* Right Gradient */}
-      <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-12 md:w-20 lg:w-32 bg-gradient-to-l from-[#f0fffe] via-[#f0fffe]/50 to-transparent z-20 pointer-events-none" />
-      
-      {/* Extra soft gradient for smoother fade */}
-      <div className="absolute left-0 top-0 bottom-0 w-6 sm:w-8 md:w-12 bg-gradient-to-r from-[#f0fffe] to-transparent z-20 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-6 sm:w-8 md:w-12 bg-gradient-to-l from-[#f0fffe] to-transparent z-20 pointer-events-none" />
-
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-16 mb-6 sm:mb-8 lg:mb-12">
-        <div className="flex flex-col md:flex-row md:items-end justify-center gap-6">
-          <div className="max-w-3xl text-center">
-            <span className="text-[#009fab] font-bold uppercase tracking-[0.3em] text-[10px] sm:text-[11px] pb-3 sm:pb-4 lg:pb-6 block">
-              Services & Treatments
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#0f172a] pb-4 sm:pb-6 lg:pb-10">
-              Specialized <span className="text-[#081e29]">Medical</span> Care Services
-            </h2>
-          </div>
-        </div>
+    <section className="py-12 sm:py-16 md:py-24 lg:py-32 bg-[#f0fffe] relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-10 w-72 h-84 bg-[#009fab] rounded-full blur-[100px]" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#14B8A6] rounded-full blur-[120px]" />
       </div>
 
-      {/* THE INFINITE SLIDER TRACK */}
-      <div className="relative">
-        <div 
-          className="relative flex items-center"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-        >
-          <motion.div 
-            className="flex gap-3 sm:gap-4 md:gap-6 lg:gap-8 px-2 sm:px-3 md:px-4"
-            animate={{
-              x: isPaused ? undefined : ["0%", "-33.33%"]
-            }}
-            transition={{
-              x: {
-                repeat: Infinity,
-                repeatType: "loop",
-                duration: 80,
-                ease: "linear",
-              }
-            }}
-          >
-            {displayServices.map((service, index) => (
-              <div 
-                key={`${service.id}-${index}`} 
-                className="w-[280px] sm:w-[320px] md:w-[360px] lg:w-[380px] xl:w-[420px] flex-shrink-0"
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-16 relative z-10">
+        <div className="flex flex-col items-center text-center mb-10 sm:mb-12 md:mb-16 lg:mb-20">
+          <span className="text-[#009fab] font-bold uppercase tracking-[0.3em] text-[10px] sm:text-[11px] mb-3 sm:mb-4 block">
+            Services & Treatments
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl text-[#0f172a]">
+            Specialized <span className="text-[#081e29]">Medical</span> Care Services
+          </h2>
+        </div>
+
+        {/* Services Grid - Shows first 8 items */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-7 lg:gap-8">
+          {displayServices.map((service, index) => {
+            const Icon = iconMap[service.icon] || LuActivity;
+            const isHovered = hoveredCard === service.id;
+
+            return (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                viewport={{ once: true, margin: "-50px" }}
+                onMouseEnter={() => setHoveredCard(service.id)}
+                onMouseLeave={() => setHoveredCard(null)}
+                className="relative"
               >
-                <ServiceCard service={service} />
-              </div>
-            ))}
-          </motion.div>
+                <div className="relative perspective-1000">
+                  <motion.div
+                    animate={{ rotateY: isHovered ? 180 : 0 }}
+                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                    className="relative w-full"
+                    style={{ transformStyle: 'preserve-3d' }}
+                  >
+                    {/* Front Side - Image and Title */}
+                    <div
+                      className="relative bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100"
+                      style={{ backfaceVisibility: 'hidden', transform: 'rotateY(0deg)' }}
+                    >
+                      {/* Image Section */}
+                      <div className="relative h-84 overflow-hidden">
+                        <img
+                          src={service.image}
+                          alt={service.title}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+
+                        {/* Icon on image - Top Left */}
+                        <div className="absolute top-3 left-3 z-10">
+                          <div className="bg-white rounded-xl p-2 shadow-lg">
+                            <Icon className="text-[#009fab] text-xl" />
+                          </div>
+                        </div>
+
+                        {/* Number Badge - Top Right */}
+                        <div className="absolute top-3 right-3 z-10">
+                          <div className="bg-white/90 backdrop-blur-sm rounded-full w-8 h-8 flex items-center justify-center text-[#009fab] font-bold text-sm shadow-sm">
+                            {String(index + 1).padStart(2, '0')}
+                          </div>
+                        </div>
+
+                        {/* Title inside image - Bottom Left */}
+                        <div className="absolute bottom-4 left-4 right-4 z-10">
+                          <h3 className="text-white font-bold text-lg sm:text-xl line-clamp-2 drop-shadow-lg">
+                            {service.title}
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Back Side - Details */}
+                    <div
+                      className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#009fab] to-[#14B8A6] rounded-2xl p-5 flex flex-col justify-between shadow-xl"
+                      style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+                    >
+                      <div>
+                        <div className="bg-white/20 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                          <Icon className="text-white text-2xl" />
+                        </div>
+                        <h3 className="text-white font-bold text-lg mb-2 line-clamp-2">{service.title}</h3>
+                        <p className="text-white/80 text-xs leading-relaxed mb-4 line-clamp-3">
+                          {service.short_description}
+                        </p>
+
+                        {/* Key Features */}
+                        {service.features && service.features.length > 0 && (
+                          <div className="space-y-1.5">
+                            {service.features.slice(0, 3).map((feature, idx) => (
+                              <div key={idx} className="flex items-center gap-2">
+                                <div className="w-1 h-1 rounded-full bg-white/60" />
+                                <span className="text-white/70 text-[10px] line-clamp-1">{feature}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+
+                      <Link
+                        to={`/services/${service.slug}`}
+                        className="mt-4 bg-white text-[#009fab] text-center py-2.5 rounded-xl font-semibold text-sm hover:bg-opacity-90 transition-all flex items-center justify-center gap-2 group"
+                      >
+                        Learn More
+                        <LuArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      </Link>
+                    </div>
+                  </motion.div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* View All Services Button */}
+        <div className="flex justify-center mt-12 sm:mt-16">
+          <Link to="/services">
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="group relative overflow-hidden bg-transparent border-2 border-[#009fab] text-[#009fab] px-8 py-3 rounded-full font-semibold hover:text-white transition-all duration-300"
+            >
+              <span className="relative z-10">View All Services</span>
+              <div className="absolute inset-0 bg-[#009fab] translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+            </motion.button>
+          </Link>
         </div>
       </div>
+
+      <style jsx>{`
+        .perspective-1000 {
+          perspective: 1000px;
+        }
+      `}</style>
     </section>
-  );
-};
-
-const ServiceCard = ({ service }) => {
-  const Icon = iconMap[service.icon] || LuActivity;
-
-  return (
-    <motion.div 
-      className="group relative h-[380px] sm:h-[440px] md:h-[480px] lg:h-[520px] xl:h-[540px] w-full rounded-[20px] sm:rounded-[30px] md:rounded-[35px] lg:rounded-[40px] overflow-hidden bg-white shadow-xl shadow-slate-200/50 border border-slate-100 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
-    >
-      {/* Visual Top (Image) */}
-      <div className="h-[65%] sm:h-[70%] md:h-[75%] lg:h-[78%] xl:h-[80%] w-full overflow-hidden relative">
-        <img 
-          src={service.image} 
-          alt={service.title} 
-          className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
-        />
-        
-        {/* Inner shadow overlay on image for depth */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
-      </div>
-
-      {/* Content Area - Moves up on hover (desktop) */}
-      <div className="relative h-[35%] sm:h-[30%] md:h-[25%] lg:h-[22%] xl:h-[20%] bg-white transition-all duration-500 lg:group-hover:h-[35%] lg:group-hover:bg-[#F8FAFC] lg:group-hover:-translate-y-12">
-        
-        {/* Floating Icon Box - Centered */}
-        <div className="absolute -top-10 sm:-top-12 md:-top-14 lg:-top-16 left-1/2 transform -translate-x-1/2 z-40">
-          <div className="bg-[#E0F7F9] p-3 sm:p-4 md:p-5 lg:p-6 rounded-[20px] sm:rounded-[24px] md:rounded-[26px] lg:rounded-[28px] shadow-2xl border-[3px] sm:border-[4px] md:border-[5px] lg:border-[6px] border-white transition-all duration-500 lg:group-hover:bg-[#0f172a] lg:group-hover:rotate-[10deg] lg:group-hover:-translate-y-2">
-            <Icon className="text-[#009fab] text-xl sm:text-2xl md:text-2xl lg:text-3xl transition-colors duration-500 lg:group-hover:text-white" />
-          </div>
-        </div>
-
-        {/* Content Wrapper with proper padding */}
-        <div className="pt-8 sm:pt-10 md:pt-11 lg:pt-12 pb-4 sm:pb-6 md:pb-8 lg:pb-12 px-3 sm:px-5 md:px-6 lg:px-8 h-full flex flex-col justify-between transition-all duration-500 lg:group-hover:pt-8">
-          {/* Title Section */}
-          <div className="text-center">
-            <h3 className="text-sm sm:text-base md:text-lg lg:text-2xl font-extrabold text-[#0f172a] mb-1 sm:mb-2 md:mb-3 transition-colors duration-500 lg:group-hover:text-[#009fab] line-clamp-2 px-1">
-              {service.title}
-            </h3>
-            
-            {/* Content - Visible on mobile, hidden on desktop until hover */}
-            <div className="block lg:hidden">
-              <p className="text-slate-500 text-[10px] sm:text-xs md:text-sm leading-relaxed mt-2 sm:mt-3 line-clamp-3 text-center">
-                {service.short_description}
-              </p>
-              <a 
-                href={`/services/${service.slug}`}
-                className="inline-flex items-center gap-1 text-[#009fab] text-[10px] sm:text-xs font-semibold mt-2 hover:gap-2 transition-all"
-              >
-                Read More
-                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
-            
-            {/* Hidden Content - Reveals on Hover (Desktop only) */}
-            <div className="hidden lg:block max-h-0 opacity-0 overflow-hidden transition-all duration-500 lg:group-hover:max-h-40 lg:group-hover:opacity-100">
-              <div className="transform translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-500">
-                <p className="text-slate-500 text-sm leading-relaxed line-clamp-3 text-center">
-                  {service.short_description}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Overlay Link - Only on desktop */}
-      <a 
-        href={`/services/${service.slug}`} 
-        className="hidden lg:block absolute inset-0 z-20"
-        aria-label={`Learn more about ${service.title}`}
-      />
-    </motion.div>
   );
 };
 

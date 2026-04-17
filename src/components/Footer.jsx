@@ -23,9 +23,9 @@ const Footer = () => {
                         <p className="text-white/80 font-medium text-sm sm:text-base">Speak with our wellness coordinators today.</p>
                     </div>
                     <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-                        <a href="tel:123-456-7890" className="text-xl sm:text-2xl lg:text-2xl font-black text-white hover:opacity-80 transition-opacity">
+                        <Link href="tel:123-456-7890" className="text-xl sm:text-2xl lg:text-2xl font-black text-white hover:opacity-80 transition-opacity">
                             +1 800-657-876
-                        </a>
+                        </Link>
                         <button className="bg-white text-[#0f172a] px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold flex items-center gap-2 sm:gap-3 hover:bg-[#0f172a] hover:text-white transition-all shadow-xl group text-sm sm:text-base">
                             Book An Appointment
                             <div className="bg-[#009fab] p-1 rounded-full text-white group-hover:bg-white group-hover:text-[#14B8A6] transition-colors">
@@ -49,9 +49,9 @@ const Footer = () => {
                     </p>
                     <div className="flex gap-4 justify-center sm:justify-start">
                         {[LuFacebook, LuInstagram, LuTwitter, LuYoutube].map((Icon, idx) => (
-                            <a key={idx} href="#" className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:bg-[#14B8A6] hover:text-white hover:border-[#14B8A6] transition-all">
+                            <Link key={idx} href="#" className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:bg-[#14B8A6] hover:text-white hover:border-[#14B8A6] transition-all">
                                 <Icon size={16} />
-                            </a>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -61,7 +61,7 @@ const Footer = () => {
                     <h4 className="text-white font-bold mb-4 sm:mb-6 lg:mb-8 uppercase tracking-widest text-[10px] sm:text-[11px]">Department</h4>
                     <ul className="space-y-2 sm:space-y-3 lg:space-y-4 text-slate-400 text-xs sm:text-sm font-medium">
                         {['Cardiology', 'Pediatrics', 'Orthopedics', 'Neurology', 'Family Medicine'].map((link) => (
-                            <li key={link}><a href="#" className="hover:text-[#14B8A6] transition-colors">{link}</a></li>
+                            <li key={link}><Link href="#" className="hover:text-[#14B8A6] transition-colors">{link}</Link></li>
                         ))}
                     </ul>
                 </div>
@@ -71,7 +71,7 @@ const Footer = () => {
                     <h4 className="text-white font-bold mb-4 sm:mb-6 lg:mb-8 uppercase tracking-widest text-[10px] sm:text-[11px]">Navigation</h4>
                     <ul className="space-y-2 sm:space-y-3 lg:space-y-4 text-slate-400 text-xs sm:text-sm font-medium">
                         {['About Us', 'Our Doctors', 'Health Blog', 'Careers', 'Contact'].map((link) => (
-                            <li key={link}><a href="#" className="hover:text-[#14B8A6] transition-colors">{link}</a></li>
+                            <li key={link}><Link href="#" className="hover:text-[#14B8A6] transition-colors">{link}</Link></li>
                         ))}
                     </ul>
                 </div>

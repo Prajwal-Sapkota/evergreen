@@ -83,7 +83,7 @@ const About = () => {
             <div className="relative group mt-6 md:mt-0">
               <div className="rounded-[20px] sm:rounded-[25px] lg:rounded-[30px] overflow-hidden border-4 sm:border-6 lg:border-8 border-white shadow-xl rotate-2 group-hover:rotate-0 transition-transform duration-500">
                 <img 
-                  src="/images/about2.avif" 
+                  src="/images/about2.png" 
                   alt="Doctor Consultation" 
                   className="w-full h-48 sm:h-56 lg:h-64 object-cover"
                 />

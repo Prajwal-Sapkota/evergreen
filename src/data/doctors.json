@@ -1,0 +1,166 @@
+{
+  "doctors": [
+    {
+      "id": 1,
+      "name": "Dr. Aarti Sharma",
+      "dept": "General Medicine",
+      "exp": "19 yrs",
+      "img": "/images/d1.png",
+      "bio": "Specialist in preventive adult medicine and primary care.",
+      "specialties": ["General Medicine", "Preventive Care", "Health Screening"]
+    },
+    {
+      "id": 2,
+      "name": "Dr. Bivek Adhikari",
+      "dept": "Cardiology",
+      "exp": "15 yrs",
+      "img": "/images/d4.png",
+      "bio": "Expert in non-invasive cardiac imaging and heart disease management.",
+      "specialties": ["Cardiac Imaging", "Heart Failure", "Hypertension"]
+    },
+    {
+      "id": 3,
+      "name": "Dr. Sujata Koirala",
+      "dept": "ENT",
+      "exp": "15 yrs",
+      "img": "/images/d2.png",
+      "bio": "Dedicated to pediatric ENT care and hearing disorders.",
+      "specialties": ["Pediatric ENT", "Hearing Disorders", "Sinus Treatment"]
+    },
+    {
+      "id": 4,
+      "name": "Dr. Bivek Basnet",
+      "dept": "Pediatrics",
+      "exp": "12 yrs",
+      "img": "/images/d5.png",
+      "bio": "Focused on adolescent developmental health and child wellness.",
+      "specialties": ["Pediatric Care", "Child Development", "Vaccination"]
+    },
+    {
+      "id": 5,
+      "name": "Dr. Prakash Neupane",
+      "dept": "Endocrinology",
+      "exp": "17 yrs",
+      "img": "/images/d6.png",
+      "bio": "Leading researcher in diabetes management and metabolic disorders.",
+      "specialties": ["Diabetes Management", "Thyroid Disorders", "Metabolic Health"]
+    },
+    {
+      "id": 6,
+      "name": "Dr. Suman Thapa",
+      "dept": "Dermatology",
+      "exp": "12 yrs",
+      "img": "/images/d4.png",
+      "bio": "Skin cancer screening, laser therapy, and cosmetic dermatology.",
+      "specialties": ["Skin Cancer", "Laser Therapy", "Cosmetic Dermatology"]
+    },
+    {
+      "id": 7,
+      "name": "Dr. Reena Poudel",
+      "dept": "Neurology",
+      "exp": "20 yrs",
+      "img": "/images/d3.png",
+      "bio": "Specializing in migraine, stroke, and sleep disorders.",
+      "specialties": ["Migraine", "Stroke Care", "Sleep Disorders"]
+    },
+    {
+      "id": 8,
+      "name": "Dr. Rajesh Karki",
+      "dept": "Orthopedics",
+      "exp": "14 yrs",
+      "img": "/images/d5.png",
+      "bio": "Sports medicine, joint reconstruction, and fracture care.",
+      "specialties": ["Sports Medicine", "Joint Replacement", "Fracture Care"]
+    },
+    {
+      "id": 9,
+      "name": "Dr. Nirmala Acharya",
+      "dept": "Oncology",
+      "exp": "18 yrs",
+      "img": "/images/d1.png",
+      "bio": "Compassionate care in precision oncology and chemotherapy.",
+      "specialties": ["Medical Oncology", "Chemotherapy", "Palliative Care"]
+    },
+    {
+      "id": 10,
+      "name": "Dr. Dipendra Shahi",
+      "dept": "Urology",
+      "exp": "11 yrs",
+      "img": "/images/d6.png",
+      "bio": "Advanced robotic surgery specialist for kidney and prostate.",
+      "specialties": ["Robotic Surgery", "Kidney Stones", "Prostate Care"]
+    },
+    {
+      "id": 11,
+      "name": "Dr. Manisha Gautam",
+      "dept": "Psychiatry",
+      "exp": "16 yrs",
+      "img": "/images/d2.png",
+      "bio": "Integrative mental health, anxiety, and depression care.",
+      "specialties": ["Anxiety Disorders", "Depression", "Mental Wellness"]
+    },
+    {
+      "id": 12,
+      "name": "Dr. Krishna Bhandari",
+      "dept": "Gastroenterology",
+      "exp": "22 yrs",
+      "img": "/images/d4.png",
+      "bio": "Expert in digestive system disorders and liver diseases.",
+      "specialties": ["GI Disorders", "Liver Disease", "Endoscopy"]
+    },
+    {
+      "id": 13,
+      "name": "Dr. Sunita Dhakal",
+      "dept": "Radiology",
+      "exp": "10 yrs",
+      "img": "/images/d3.png",
+      "bio": "Diagnostic imaging and interventional radiology specialist.",
+      "specialties": ["MRI", "CT Scan", "Ultrasound", "Interventional Radiology"]
+    },
+    {
+      "id": 14,
+      "name": "Dr. Anil Rijal",
+      "dept": "Emergency Medicine",
+      "exp": "13 yrs",
+      "img": "/images/d5.png",
+      "bio": "Emergency medicine and trauma care expert.",
+      "specialties": ["Emergency Care", "Trauma", "Critical Care"]
+    },
+    {
+      "id": 15,
+      "name": "Dr. Sita Kharel",
+      "dept": "Dentistry",
+      "exp": "15 yrs",
+      "img": "/images/d1.png",
+      "bio": "Cosmetic dentistry, root canal, and oral surgery.",
+      "specialties": ["Cosmetic Dentistry", "Root Canal", "Oral Surgery"]
+    },
+    {
+      "id": 16,
+      "name": "Dr. Gopal Tamang",
+      "dept": "General Surgery",
+      "exp": "25 yrs",
+      "img": "/images/d6.png",
+      "bio": "Specialized in minimally invasive and laparoscopic procedures.",
+      "specialties": ["Laparoscopic Surgery", "Hernia Repair", "Gallbladder Surgery"]
+    },
+    {
+      "id": 17,
+      "name": "Dr. Radhika Pokharel",
+      "dept": "Physical Therapy",
+      "exp": "9 yrs",
+      "img": "/images/d2.png",
+      "bio": "Rehabilitation, physical therapy, and pain management.",
+      "specialties": ["Physical Therapy", "Rehabilitation", "Pain Management"]
+    },
+    {
+      "id": 18,
+      "name": "Dr. Hari Prasad Upadhyay",
+      "dept": "Ophthalmology",
+      "exp": "14 yrs",
+      "img": "/images/d4.png",
+      "bio": "Advanced cataract, glaucoma, and refractive surgery.",
+      "specialties": ["Cataract Surgery", "Glaucoma Care", "LASIK", "Retina"]
+    }
+  ]
+}

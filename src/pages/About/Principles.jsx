@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { LuTarget, LuEye, LuGem } from 'react-icons/lu';
 
-const PrinciplesGrid = () => {
+const Principles = () => {
   const blocks = [
     {
       title: "Our Mission",
@@ -31,7 +31,7 @@ const PrinciplesGrid = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0 rounded-[40px] overflow-hidden shadow-2xl">
           
@@ -69,4 +69,4 @@ const PrinciplesGrid = () => {
   );
 };
 
-export default PrinciplesGrid;
+export default Principles;

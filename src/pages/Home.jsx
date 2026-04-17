@@ -11,7 +11,7 @@ import Testimonials from "../components/Testimonials"
 const Home = () => {
     return(
         <div className="overflow-x-hidden">
-            <Navbar/>
+           
             <Hero/>
             <About/>
             <Services/>
@@ -19,7 +19,7 @@ const Home = () => {
             <Plans/>
             <Testimonials/>
             <Blog/>
-            <Footer/>
+            
         </div>
     )
 }

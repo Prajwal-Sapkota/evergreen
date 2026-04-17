@@ -49,7 +49,7 @@ const Hero = () => {
         >
           {/* Main Image */}
           <img 
-            src="/images/abouthero.webp" 
+            src="/images/abouthero.png" 
             alt="Medical Team"
             className="w-full h-full object-cover"
             onLoad={() => setImageLoaded(true)}
