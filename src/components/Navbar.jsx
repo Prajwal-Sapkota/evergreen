@@ -135,6 +135,7 @@ const Navbar = () => {
                 <li key={link.name}>
                   <Link
                     to={link.href}
+                    onClick={window.scrollTo(0,0)}
                     className={`relative text-[13px] xl:text-[15px] font-semibold tracking-wide transition-all duration-300 group ${link.active ? 'text-[#009fab]' : 'text-slate-800 hover:text-[#14B8A6]'
                       }`}
                   >
