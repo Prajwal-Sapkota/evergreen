@@ -23,7 +23,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="mb-12"
         >
-          <span className="text-[#14B8A6] font-bold uppercase tracking-[0.3em] text-[11px] block mb-4">
+          <span className="text-[#14B8A6] font-bold uppercase tracking-[0.3em] text-[14px] block mb-4">
             Our Medical Services
           </span>
           <h1 className="text-3xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight max-w-4xl mx-auto">
